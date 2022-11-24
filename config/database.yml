@@ -4,11 +4,8 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
-  encoding: utf8
    # min_messages: warning
   socket: /tmp/.s.PGSQL.5432
-  host: /tmp
 
 development:
   <<: *default
