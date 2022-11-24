@@ -10,9 +10,12 @@
   <p align="center">
     This is the final capstone project for the Full Stack Developer Program at Microverse
     <br />
+    <a href="https://github.com/shahira-sadat/final-capstone-project-frontend">Front-end repo</a>
+    -
+    <a href="https://github.com/nimplay/final-capstone-project">Back-end repo</a>
     <br />
     <a href="https://github.com/shahira-sadat/final-capstone-project-frontend/issues">Report Bug</a>
-    ·
+    -
     <a href="https://github.com/nimplay/final-capstone-project/issues">Request Feature</a>
   </p>
 </p>
@@ -20,7 +23,6 @@
 ## Table of Contents:
 
 * [About the Project](#about-the-project)
-* [Frontend repository](#frontend-repository)
 * [Project requirements](#project-requirements)
 * [Entity Relation Diagram](#entity-relation-diagram)
 * [Built With](#built-with)
@@ -35,10 +37,6 @@
 ## About The Project:
 
 
-
-## Frontend repository:
-
-To visit the frontend repository, please click on this <a href="https://github.com/shahira-sadat/final-capstone-project-frontend">link</a>.
 
 ## Project requirements:
 
@@ -151,7 +149,7 @@ Tu run the test in your terminal, please type: `rspec spec/capybara`
 
 Link to the project Kanban board: <a href="https://github.com/nimplay/final-capstone-project/projects/1">Click here</a>.
 
-Link to the screenshot of the initial state of the Kanban board: <a href="">Click here</a>.
+Link to the screenshot of the initial state of the Kanban board: <a href="https://user-images.githubusercontent.com/102382778/203821762-58fc95d8-95e5-4008-9016-e158edb2236d.png">Click here</a>.
 
 
 
