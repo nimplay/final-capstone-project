@@ -21,14 +21,14 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
    # min_messages: warning
-  socket: /tmp/.s.PGSQL.5432
+  # socket: /tmp/.s.PGSQL.5432
 
 development:
   <<: *default
   database: final_capstone_backend_development
   username: postgres
   password: 1234
-  port: 5432
+  # port: 5432
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
