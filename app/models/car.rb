@@ -1,5 +1,5 @@
 class Car < ApplicationRecord
-  has_many :reservations
+  has_many :bookings
 
   validates :model_name, presence: true
   validates :image, presence: true
