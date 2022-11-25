@@ -5,6 +5,11 @@ userslist = User.create([
                               role: 'admin',
                               password: '123456',
                             },
+                            { name: 'lola',
+                              email:'lola@email.com',
+                              role: 'user',
+                              password: '123456',
+                            },
                           ])
 puts 'Users created'
 puts 'Creating Tests'
