@@ -27,7 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_25_034921) do
 
   create_table "cars", force: :cascade do |t|
     t.string "model_name"
-    t.string "picture"
+    t.string "image"
     t.string "driver_name"
     t.decimal "price"
     t.boolean "booked"
