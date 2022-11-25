@@ -8,8 +8,8 @@ default: &default
 development:
   <<: *default
   database: final_capstone_backend_development
-  username: postgres
-  password: 1234
+  # username: postgres
+  # password: 1234
   # port: 5432
 
   # The specified database role being used to connect to postgres.
@@ -28,7 +28,7 @@ development:
 
   # The TCP port the server listens on. Defaults to 5432.
   # If your server runs on a different port number, change accordingly.
-  port: 5433
+  # port: 5433
 
   # Schema search path. The server defaults to $user,public
   #schema_search_path: myapp,sharedapp,public
@@ -45,9 +45,9 @@ development:
 test:
   <<: *default
   database: final_capstone_backend_test
-  username: postgres
-  password: 1234
-  port: 5433
+  # username: postgres
+  # password: 1234
+  # port: 5433
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -73,5 +73,5 @@ production:
   <<: *default
   url: <%= ENV["MY_APP_DATABASE_URL"] %>
   database: final_capstone_backend_production
-  username: final_capstone_backend
-  password: <%= ENV["FINAL_CAPSTONE_BACKEND_DATABASE_PASSWORD"] %>
+  # username: final_capstone_backend
+  # password: <%= ENV["FINAL_CAPSTONE_BACKEND_DATABASE_PASSWORD"] %>
