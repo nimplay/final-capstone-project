@@ -7,6 +7,7 @@ class Api::V1::SessionsController < ApplicationController
       head(:unauthorized)
     end
   end
+
   def destroy
     @user = User.where(params[:id]).first
     if @user&.destroy
