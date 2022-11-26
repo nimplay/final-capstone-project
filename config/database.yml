@@ -71,9 +71,9 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV["MY_APP_DATABASE_URL"] %>
-  # url: postgres://fina_c6ea_user:QBfQWC1IyxVffzXx1lmoIN50EtRHzEne@dpg-ce0ie7la4996ndrq91q0-a/fina_c6ea
-  # password: QBfQWC1IyxVffzXx1lmoIN50EtRHzEne
-  database: final_capstone_backend_development
-  username: final_capstone_backend
-  password: <%= ENV["FINAL_CAPSTONE_BACKEND_DATABASE_PASSWORD"] %>
+  #url: <%= ENV["MY_APP_DATABASE_URL"] %>
+  url: postgres://fina_c6ea_user:QBfQWC1IyxVffzXx1lmoIN50EtRHzEne@dpg-ce0ie7la4996ndrq91q0-a/fina_c6ea
+  password: QBfQWC1IyxVffzXx1lmoIN50EtRHzEne
+  database: fina_c6ea
+  username: fina_c6ea_user
+  # password: <%= ENV["FINAL_CAPSTONE_BACKEND_DATABASE_PASSWORD"] %>
