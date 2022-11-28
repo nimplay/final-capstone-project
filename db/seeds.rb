@@ -4,11 +4,13 @@ userslist = User.create([
                               email:'lola@email.com',
                               role: 'admin',
                               password: '123456',
+                              password_confirmation: '123456'
                             },
-                            { name: 'lola',
-                              email:'lola@email.com',
+                            { name: 'pepe',
+                              email:'pepe@email.com',
                               role: 'user',
                               password: '123456',
+                              password_confirmation: '123456',
                             },
                           ])
 puts 'Users created'
