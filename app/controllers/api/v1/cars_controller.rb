@@ -14,9 +14,9 @@ class Api::V1::CarsController < ApplicationController
   # POST /cars or /cars.json
   def create
     @car = Car.new(car_params)
-    if @car.save
-      render json: @car, status: :created
-    end
+    return unless @car.save
+
+    render json: @car, status: :created
   end
 
   # PATCH/PUT /cars/1 or /cars/1.json
