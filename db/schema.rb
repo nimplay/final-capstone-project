@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_26_002054) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_25_034921) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
     t.datetime "date"
+    t.datetime "date_return"
     t.string "city"
     t.bigint "user_id", null: false
     t.bigint "car_id", null: false
@@ -28,18 +29,21 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_26_002054) do
   create_table "cars", force: :cascade do |t|
     t.string "car_name"
     t.string "image"
-    t.string "driver_name"
+    t.string "brand"
+    t.string "color"
+    t.string "year"
     t.decimal "price"
-    t.boolean "booked"
+    t.boolean "booked", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "role"
     t.string "name", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "user_name", default: "", null: false
+    t.string "photo"
+    t.date "date_of_birth"
+    t.string "role", default: "user", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -47,6 +51,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_26_002054) do
     t.datetime "remember_created_at"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["user_name"], name: "index_users_on_user_name", unique: true
   end
 
   add_foreign_key "bookings", "cars"
