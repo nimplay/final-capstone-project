@@ -3,7 +3,5 @@ class Car < ApplicationRecord
 
   validates :model_name, presence: true
   validates :image, presence: true
-  validates :booked, presence: true
-  validates :driver_name, presence: true, length: { maximum: 50 }
   validates :price, presence: true, numericality: { greater_than: 0 }
 end
