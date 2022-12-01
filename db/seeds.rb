@@ -18,23 +18,3 @@ puts 'Creating user'
                             },
                          ])
 puts 'Users created'
-
-puts 'Creating Car'
-carslist = Car.create([
-  { car_name: 'Fiat 500',
-    image: 'https://www.fiat.com/content/dam/fiat/com/my23/500-500c/colorizer/500/green/500-figurini-colorizer-Rugiada-Green-desktop-680x430.png',
-    brand: 'Fiat',
-    color: 'Green',
-    year: '2019',
-    price: 100,
-    booked: false,
-  },
-])
-
-puts 'Cars created'
-
-puts 'Booking a Car'
-
-
-userslist[1].bookings.create(city: 'san crist
-  obal', car_id: 1, date: Date.today, date_return: Date.tomorrow)
