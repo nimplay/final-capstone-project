@@ -1,6 +1,7 @@
-class BookingsController < ApplicationController
+class Api::V1::BookingsController < ApplicationController
   def index
     @bookings = Booking.all
+    render json: @bookings.to_json, status: :ok
   end
 
   def show
