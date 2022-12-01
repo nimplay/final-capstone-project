@@ -18,7 +18,8 @@ class Api::V1::BookingsController < ApplicationController
 
   # POST /bookings
   def create
-    @user.bookings.new(booking_params)
+    @booking = Booking.new(booking_params)
+    @booking.user = @user
 
     if @booking.save
       render json: @booking, status: :created
@@ -39,7 +40,11 @@ class Api::V1::BookingsController < ApplicationController
 
   # DELETE /bookings/1
   def destroy
-    @booking.destroy
+    if @booking.destroy
+      render body: nil, status: :no_content
+    else
+      render body: nil, status: :not_found
+    end
   end
 
   private
@@ -55,6 +60,7 @@ class Api::V1::BookingsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def booking_params
-    params.require(:booking).permit(:date, :date_return, :city, :car_id)
+    # byebug
+    params.permit(:date, :date_return, :city, :car_id)
   end
 end
