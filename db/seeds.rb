@@ -30,4 +30,11 @@ carslist = Car.create([
     booked: false,
   },
 ])
+
 puts 'Cars created'
+
+puts 'Booking a Car'
+
+
+userslist[1].bookings.create(city: 'san crist
+  obal', car_id: 1, date: Date.today, date_return: Date.tomorrow)
