@@ -28,7 +28,7 @@ class Users::SessionsController < Devise::SessionsController
   def destroy
     @current_user = nil
     render json: { message: 'Successfully logged out.', status: 200 },
-            status: 200
+           status: 200
   end
 
   private
