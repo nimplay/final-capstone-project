@@ -1,11 +1,20 @@
 USERS
 
+login
+{
+  "email": "lola@email.com",
+  "password": "123456"
+}
+
 signup user
 
 {
   "user": {
-    "name": "rodolfo",
-    "email": "rodolfo@email.com",
+    "name": "toronbolo",
+    "user_name":"toron",
+    "email": "toron@email.com",
+    "photo": "photo",
+    "date_of_birth":"01-01-2022",
     "password": "123456",
     "password_confirmation": "123456"
   }
@@ -16,9 +25,11 @@ CARS
 post new car
 
 {
-  "car_name": "Toyota RAV4 Crossover SUV 2022",
-   "image": "https://www.toyota.com/imgix/content/dam/toyota/jellies/max/2022/rav4/hybridse/4524/8w2/2.png?fm=webp&bg=white&w=768&h=328&q=90",
-    "driver_name":"Lola",
-    "price": 300,
-    "booked": true
+  "car_name": "fiesta",
+  "image": "https://multimarca.com.ve/wp-content/uploads/2022/06/FIESTA-MFU56E-DIAGONAL-1.jpg",
+  "brand": "Ford",
+  "color": "Red",
+  "year": "2022",
+  "price": 300,
+  "boolean": false
 }

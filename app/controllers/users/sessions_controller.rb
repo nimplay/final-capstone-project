@@ -1,23 +1,39 @@
 class Users::SessionsController < Devise::SessionsController
-  respond_to :json
-  # def create
-  #  user = User.where(email: params[:email]).first
+  skip_before_action :verify_authenticity_token
+  #  respond_to :json
 
-   # if user.valid_password?(params[:password])
-    #  sign_in user
-    #  render json: user.as_json(only: %i[id email name]), status: :created
-    #else
-    #  render json: { errors: 'Invalid email or password' }, status: :unprocessable_entity
-    #end
-  #end
+  # private
+
+  # def respond_with(resource, _opts = {})
+  #   render json: resource
+  # end
+
+  # def respond_to_on_destroy
+  #  render json: { message: 'Successfully logged out.' }, status: :ok
+  # end
+
+  def create
+    user = User.find_by(email: login_params[:email])
+    if user&.valid_password?(login_params[:password])
+      @current_user = user
+      render json: { user: user.attributes.except('password',
+                                                  'password_confirmation'), status: 200 },
+             status: 200
+    else
+      render json: { message: 'Error, Unauthorized', status: 401 },
+             status: :unauthorized
+    end
+  end
+
+  def destroy
+    @current_user = nil
+    render json: { message: 'Successfully logged out.', status: 200 },
+           status: 200
+  end
 
   private
 
-  def respond_with(resource, _opts = {})
-    render json: resource
-  end
-
-  def respond_to_on_destroy
-    render json: { message: 'Successfully logged out.' }
+  def login_params
+    params.permit(:email, :password)
   end
 end
