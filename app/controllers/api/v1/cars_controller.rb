@@ -1,4 +1,5 @@
 class Api::V1::CarsController < ApplicationController
+  # before_action :authenticate_user!, only: %i[create update destroy]
   # GET /cars or /cars.json
   def index
     @cars = Car.all

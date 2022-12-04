@@ -3,14 +3,15 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.2'
 # ruby '2.7.6'
-
+gem 'bcrypt', '~> 3.1'
 gem 'bootsnap', require: false
 gem 'devise'
+gem 'devise-jwt'
 gem 'importmap-rails'
 gem 'jbuilder'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
-gem 'rack-cors', '~> 1.1', '>= 1.1.1'
+gem 'rack-cors'
 gem 'rails', '~> 7.0.4'
 gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'sprockets-rails'
@@ -33,3 +34,6 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+# 'dotenv-rails' is for storing secret key in ENV file
+gem 'dotenv-rails', groups: %i[development test]
