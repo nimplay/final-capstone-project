@@ -14,7 +14,7 @@ class Users::SessionsController < Devise::SessionsController
 
   def create
     user = User.find_by(email: login_params[:email])
-    if user && user.valid_password?(login_params[:password])
+    if user&.valid_password?(login_params[:password])
       @current_user = user
       render json: { user: user.attributes.except('password',
                                                   'password_confirmation'), status: 200 },
