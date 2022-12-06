@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.2'
-# ruby '2.7.6'
 gem 'bcrypt', '~> 3.1'
 gem 'bootsnap', require: false
 gem 'devise'
@@ -18,6 +17,10 @@ gem 'sprockets-rails'
 gem 'stimulus-rails'
 gem 'turbo-rails'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+
+gem 'rspec-rails' 
+
+gem 'rswag'
 
 gem 'byebug', '~> 11.1', '>= 11.1.3'
 
