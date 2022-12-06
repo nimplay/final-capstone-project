@@ -20,7 +20,20 @@ RSpec.describe 'api/v1/cars', type: :request do
 
     post('create car') do
       response(200, 'successful') do
-
+      consumes 'application/json'
+        parameter name: :car, in: :body, schema: {
+          type: :object,
+          properties: {
+            car_name: { type: :string },
+            image: { type: :string },
+            booked: { type: :boolean },
+            price: { type: :number },
+            year: { type: :string },
+            brand: { type: :string },
+            color: { type: :string },
+          },
+          required: %w[car_name image price]
+        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -121,6 +134,14 @@ RSpec.describe 'api/v1/cars', type: :request do
 
     delete('delete car') do
       response(200, 'successful') do
+            consumes 'application/json'
+        parameter name: :car, in: :body, schema: {
+          type: :object,
+          properties: {
+            id: { type: :number },
+          },
+          required: %w[id]
+        }
         let(:id) { '123' }
 
         after do |example|

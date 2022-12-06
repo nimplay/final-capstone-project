@@ -1,7 +1,7 @@
 ---
 openapi: 3.0.1
 info:
-  title: API V1
+  title: Rental Cars API
   version: v1
 paths:
   "/api/v1/users/{user_id}/bookings":
@@ -96,9 +96,34 @@ paths:
           description: successful
     post:
       summary: create car
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                car_name:
+                  type: string
+                image:
+                  type: string
+                booked:
+                  type: boolean
+                price:
+                  type: number
+                year:
+                  type: string
+                brand:
+                  type: string
+                color:
+                  type: string
+              required:
+              - car_name
+              - image
+              - price
   "/api/v1/cars/new":
     get:
       summary: new car
@@ -143,9 +168,20 @@ paths:
           description: successful
     delete:
       summary: delete car
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: number
+              required:
+              - id
   "/api/v1/users":
     get:
       summary: list users
@@ -214,4 +250,4 @@ servers:
 - url: https://{defaultHost}
   variables:
     defaultHost:
-      default: www.example.com
+      default: 127.0.0.1:3000/
