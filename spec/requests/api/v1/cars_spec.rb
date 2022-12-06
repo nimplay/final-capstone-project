@@ -1,12 +1,9 @@
 require 'swagger_helper'
 
 RSpec.describe 'api/v1/cars', type: :request do
-
   path '/api/v1/cars' do
-
     get('list cars') do
       response(200, 'successful') do
-
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -20,7 +17,7 @@ RSpec.describe 'api/v1/cars', type: :request do
 
     post('create car') do
       response(200, 'successful') do
-      consumes 'application/json'
+        consumes 'application/json'
         parameter name: :car, in: :body, schema: {
           type: :object,
           properties: {
@@ -30,7 +27,7 @@ RSpec.describe 'api/v1/cars', type: :request do
             price: { type: :number },
             year: { type: :string },
             brand: { type: :string },
-            color: { type: :string },
+            color: { type: :string }
           },
           required: %w[car_name image price]
         }
@@ -47,10 +44,8 @@ RSpec.describe 'api/v1/cars', type: :request do
   end
 
   path '/api/v1/cars/new' do
-
     get('new car') do
       response(200, 'successful') do
-
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -134,11 +129,11 @@ RSpec.describe 'api/v1/cars', type: :request do
 
     delete('delete car') do
       response(200, 'successful') do
-            consumes 'application/json'
+        consumes 'application/json'
         parameter name: :car, in: :body, schema: {
           type: :object,
           properties: {
-            id: { type: :number },
+            id: { type: :number }
           },
           required: %w[id]
         }
