@@ -1,0 +1,253 @@
+---
+openapi: 3.0.1
+info:
+  title: Rental Cars API
+  version: v1
+paths:
+  "/api/v1/users/{user_id}/bookings":
+    parameters:
+    - name: user_id
+      in: path
+      description: user_id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: list bookings
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create booking
+      responses:
+        '200':
+          description: successful
+  "/api/v1/users/{user_id}/bookings/new":
+    parameters:
+    - name: user_id
+      in: path
+      description: user_id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: new booking
+      responses:
+        '200':
+          description: successful
+  "/api/v1/users/{user_id}/bookings/{id}/edit":
+    parameters:
+    - name: user_id
+      in: path
+      description: user_id
+      required: true
+      schema:
+        type: string
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: edit booking
+      responses:
+        '200':
+          description: successful
+  "/api/v1/users/{user_id}/bookings/{id}":
+    parameters:
+    - name: user_id
+      in: path
+      description: user_id
+      required: true
+      schema:
+        type: string
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show booking
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update booking
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update booking
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete booking
+      responses:
+        '200':
+          description: successful
+  "/api/v1/cars":
+    get:
+      summary: list cars
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create car
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                car_name:
+                  type: string
+                image:
+                  type: string
+                booked:
+                  type: boolean
+                price:
+                  type: number
+                year:
+                  type: string
+                brand:
+                  type: string
+                color:
+                  type: string
+              required:
+              - car_name
+              - image
+              - price
+  "/api/v1/cars/new":
+    get:
+      summary: new car
+      responses:
+        '200':
+          description: successful
+  "/api/v1/cars/{id}/edit":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: edit car
+      responses:
+        '200':
+          description: successful
+  "/api/v1/cars/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show car
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update car
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update car
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete car
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: number
+              required:
+              - id
+  "/api/v1/users":
+    get:
+      summary: list users
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create user
+      responses:
+        '200':
+          description: successful
+  "/api/v1/users/new":
+    get:
+      summary: new user
+      responses:
+        '200':
+          description: successful
+  "/api/v1/users/{id}/edit":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: edit user
+      responses:
+        '200':
+          description: successful
+  "/api/v1/users/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show user
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update user
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update user
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete user
+      responses:
+        '200':
+          description: successful
+  "/users-data":
+    get:
+      summary: show user
+      responses:
+        '200':
+          description: successful
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: 127.0.0.1:3000/
