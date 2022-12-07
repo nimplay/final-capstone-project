@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   mount Rswag::Ui::Engine => '/api-docs'
   mount Rswag::Api::Engine => '/api-docs'
   get 'private/test'
-  root 'home#index'
+  root to: redirect('/api-docs')
   devise_for :users,
   path: '',
   path_names: {
