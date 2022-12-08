@@ -13,7 +13,7 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   def create
-    user = User.find_by(email: login_params[:email])
+    user = User.find_by(user_name: login_params[:user_name])
     if user&.valid_password?(login_params[:password])
       @current_user = user
       render json: { user: user.attributes.except('password',
@@ -34,6 +34,6 @@ class Users::SessionsController < Devise::SessionsController
   private
 
   def login_params
-    params.permit(:email, :password)
+    params.permit(:user_name, :password)
   end
 end
