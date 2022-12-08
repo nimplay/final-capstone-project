@@ -22,11 +22,12 @@ class Api::V1::CarsController < ApplicationController
 
   # PATCH/PUT /cars/1 or /cars/1.json
   def update
-    @car = Car.find_by(id: params[:id])
-    if @car.update(car_params)
-      render :show, status: :ok, location: @car
+    car_update = Car.find(params[:id])
+    # byebug
+    if car_update.update(car_params)
+      render json: car_update
     else
-      render json: @car.errors, status: :unprocessable_entity
+      render json: car_update.errors, status: :unprocessable_entity
     end
   end
 
