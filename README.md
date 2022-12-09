@@ -123,6 +123,10 @@ This project was built using these technologies:
 ## Live Demo:
 To visit the live API site, please Click [here.]()
 
+## squema
+
+[](squema.jpeg)
+
 ## API Documentation:
 To see the API documentation, please Click [here.](https://cars-rental.onrender.com/api-docs/index.html)
 
