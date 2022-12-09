@@ -36,7 +36,7 @@
 
 ## About The Project:
 
-
+The User admin is named lolita and you password is 123456
 
 ## Project requirements:
 
