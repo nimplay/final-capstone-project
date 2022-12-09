@@ -163,18 +163,18 @@ Link to the screenshot of the initial state of the Kanban board: <a href="https:
 
 ## Authors:
 
-👤 ** Nimrod Acosta **
+  Nimrod Acosta 👨‍💻
 - GitHub: [nimplay](https://github.com/nimplay)
 - Twitter: [NimrodAcosta](https://twitter.com/NimrodAcosta)
 - LinkedIn: [nimrod-acosta](https://www.linkedin.com/in/nimrod-acosta-734330169/)
 
 
-👤 *Shahira Sadat*👩🏻‍💻
+ Shahira Sadat 👩🏻‍💻
 - GitHub: [Shahira Sadat](https://github.com/shahira-sadat)
 - Twitter: [Shahira Sadat](https://twitter.com/SadatShahira)
 - Linkedin: [Shahira Sadat](https://www.linkedin.com/in/shahira-sadat-49b402199)
 
-👤 **Williams Colmenares**
+ Williams Colmenares 👨‍💻
 - GitHub: [@williamscch](https://github.com/williamscch)
 - Twitter: [@wdavidcch](https://twitter.com/wdavidcch)
 - LinkedIn: [Williams Colmenares on LinkedIn](https://www.linkedin.com/in/williamscolmenaresch/)
