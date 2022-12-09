@@ -5,7 +5,7 @@
   "logo and title"
   </a>
 
-  <h1 align="center"><strong>Title</strong></h1>
+  <h1 align="center"><strong>Rental Cars</strong></h1>
 
   <p align="center">
     This is the final capstone project for the Full Stack Developer Program at Microverse
@@ -96,7 +96,8 @@ E) In the navbar I can see a button to show the list of all the reservations cre
 
 ## Entity Relation Diagram:
 
-<img src="" alt="Logo" width="800" height="500">
+<img src="https://user-images.githubusercontent.com/53530780/206700733-68cf3072-c0f1-4470-94e5-e3780e69231b.png" alt="Logo" width="800" height="500">
+
   </a>
 
 ## Built With:
@@ -116,6 +117,8 @@ This project was built using these technologies:
 * Rubocop
 * Capybara
 * Rspec
+* Devise
+* CanCanCan
 * OpenApi(Swagger)
 * GitHub, Gitflow
 * Visual Studio
